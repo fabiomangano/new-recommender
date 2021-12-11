@@ -1,0 +1,34 @@
+.modal {
+  position: absolute;
+  border: 1px solid rgb(204, 204, 204);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 500px;
+  background: rgb(255, 255, 255);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.header {
+  font-size: 25px;
+  padding: 20px 0 30px 0;
+}
+
+.footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 40px);
+  padding-bottom: 30px;
+  justify-content: space-between;
+}
