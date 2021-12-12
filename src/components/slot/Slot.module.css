@@ -1,0 +1,7 @@
+.container {
+  width: 150px;
+  height: 200px;
+  border: 1px solid hsl(0, 0%, 80%);
+  display: inline-block;
+  cursor: pointer;
+}

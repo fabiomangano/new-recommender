@@ -3,10 +3,11 @@ import Select from 'react-select';
 import style from './SelectField.module.css';
 
 const SelectField = ({ placeholder, options, field, form, label }) => (
-  <div style={style.container}>
+  <div>
+    <label htmlFor={label}>{label}</label>
     <Select
       name={field.name}
-      className={style.select}
+      className={style['react-select']}
       options={options}
       value={
         options ? options.find((option) => option.value === field.value) : ''

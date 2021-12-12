@@ -1,0 +1,15 @@
+.react-datepicker__input-container,
+.react-datepicker__input-container input {
+  display: inline-block;
+  width: 200px;
+}
+
+.react-datepicker__input-container input {
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 4px;
+  padding: 11px;
+}
+
+.react-datepicker__input-container select:focus {
+  border-color: blue;
+}

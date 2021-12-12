@@ -4,6 +4,7 @@ import { Formik, Field, Form } from 'formik';
 import SelectField from '../select-field/SelectField';
 import DatePicker from '../date-picker/DatePicker';
 import Button from '../button/Button';
+import Slot from '../slot/Slot';
 import style from './CreateVodForm.module.css';
 
 const clusters = [
@@ -32,18 +33,40 @@ const CreateVodForm = () => {
         {({ errors, touched }) => (
           <Form>
             <div className={style.bar}>
-              <Field
-                name="cluster"
-                label="Cluster"
-                placeholder="select cluster"
-                component={SelectField}
-                options={clusters}
-              />
-              {errors.cluster && touched.cluster ? (
-                <div>{errors.cluster}</div>
-              ) : null}
-              <Field name="startDate" component={DatePicker} />
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <Field
+                  name="cluster"
+                  label="Cluster: "
+                  placeholder="select a cluster..."
+                  component={SelectField}
+                  options={clusters}
+                />
+                {errors.cluster && touched.cluster ? (
+                  <div>{errors.cluster}</div>
+                ) : null}
+                &nbsp;&nbsp;&nbsp;
+                <Field
+                  name="startDate"
+                  label="Start Date: "
+                  component={DatePicker}
+                  placeholder="select a date..."
+                />
+              </div>
               <Button>Load Recs</Button>
+            </div>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                paddingTop: '60px',
+              }}
+            >
+              <Slot />
+              <Slot />
+              <Slot />
+              <Slot />
+              <Slot />
             </div>
           </Form>
         )}
